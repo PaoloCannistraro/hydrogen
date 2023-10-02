@@ -1,11 +1,11 @@
 :root {
   --aside-width: 400px;
-  --cart-aside-summary-height-with-discount: 300px;
-  --cart-aside-summary-height: 250px;
+  --cart-aside-summary-height-with-discount: 400px;
+  --cart-aside-summary-height: 400px;
   --grid-item-width: 355px;
   --header-height: 64px;
   --color-dark: #000;
-  --color-light: #fff;
+  --color-light: #66ab87;
 }
 
 img {
@@ -19,8 +19,8 @@ img {
 */
 aside {
   background: var(--color-light);
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
-  height: 100vh;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+  height: 80vh;
   max-width: var(--aside-width);
   min-width: var(--aside-width);
   position: fixed;
@@ -470,4 +470,27 @@ aside li {
 
 .account-logout {
   display: inline-block;
+}
+
+/*
+* --------------------------------------------------
+* routes/login
+* --------------------------------------------------
+*/
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login form button {
+  background-color: var(--color-light);
 }
