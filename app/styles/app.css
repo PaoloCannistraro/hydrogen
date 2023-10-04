@@ -1,7 +1,7 @@
 :root {
   --aside-width: 400px;
   --cart-aside-summary-height-with-discount: 400px;
-  --cart-aside-summary-height: 400px;
+  --cart-aside-summary-height: 450px;
   --grid-item-width: 355px;
   --header-height: 64px;
   --color-dark: #000;
@@ -229,7 +229,7 @@ aside li {
 }
 
 .cart-summary-aside {
-  background: white;
+  background: var(--color-light);
   border-top: 1px solid var(--color-dark);
   bottom: 0;
   padding-top: 0.75rem;
@@ -237,8 +237,14 @@ aside li {
   width: calc(var(--aside-width) - 40px);
 }
 
+.label-checkout {
+  border-top: 1px solid var(--color-dark);
+  padding-top: 1.25rem;
+}
+
 .cart-line-quantiy {
   display: flex;
+  align-items: center;
 }
 
 .cart-discount {
@@ -261,10 +267,34 @@ aside li {
   overflow-y: auto;
 }
 
+.button-search {
+  background-color: var(--color-dark);
+  border-radius: 10px;
+  color: white;
+  padding: 0px 10px;
+  height: 30px;
+}
+
+.button-search:hover {
+  background-color: var(--color-light);
+  border-radius: 0px;
+  color: var(--color-dark);
+  cursor: pointer;
+  border-radius: 0px;
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-duration: 1s;
+}
+
 .predictive-search-form {
   background: var(--color-light);
   position: sticky;
   top: 0;
+}
+
+.predictive-search-form > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .predictive-search-result {
@@ -388,6 +418,22 @@ aside li {
   }
 }
 
+.button-add-to-cart {
+  background-color: var(--color-light);
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.button-add-to-cart:hover {
+  cursor: pointer;
+  background-color: var(--color-dark);
+  color: white;
+  border-radius: 0px;
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-duration: 1s;
+  padding: 8px;
+}
+
 .product h1 {
   margin-top: 0;
 }
@@ -477,6 +523,23 @@ aside li {
 * routes/login
 * --------------------------------------------------
 */
+
+.sign-in-button {
+  background-color: var(--color-light);
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.sign-in-button:hover {
+  background-color: var(--color-dark);
+  border-radius: 0px;
+  color: var(--color-light);
+  cursor: pointer;
+  border-radius: 0px;
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-duration: 1s;
+}
+
 .login {
   display: flex;
   flex-direction: column;
@@ -493,4 +556,48 @@ aside li {
 
 .login form button {
   background-color: var(--color-light);
+}
+
+/*
+* --------------------------------------------------
+* HomePageLanding
+* --------------------------------------------------
+*/
+
+.background-home {
+  filter: grayscale(43%) blur(1px) brightness(76%);
+  -webkit-filter: grayscale(43%) blur(1px) brightness(76%);
+  -moz-filter: grayscale(43%) blur(1px) brightness(76%);
+}
+.box:hover {
+  filter: invert(0.1);
+}
+
+.landing-text > h1 {
+  font-size: 4rem;
+}
+
+.landing-text > p {
+  font-size: 2rem;
+}
+
+.card {
+  font-size: 164px;
+  width: 300px;
+  height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 20px;
+  transform-origin: 10% 60%;
+  box-shadow: 9px 13px 33px -16px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 9px 13px 33px -16px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 9px 13px 33px -16px rgba(0, 0, 0, 0.75);
+}
+
+.cards {
+  position: absolute;
+  top: 80px;
+  left: 50px;
 }

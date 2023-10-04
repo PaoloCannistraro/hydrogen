@@ -258,6 +258,7 @@ function AddToCartButton({analytics, children, disabled, lines, onClick}) {
           />
           <button
             type="submit"
+            className="button-add-to-cart"
             onClick={onClick}
             disabled={disabled ?? fetcher.state !== 'idle'}
           >

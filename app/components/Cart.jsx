@@ -102,7 +102,7 @@ function CartCheckoutActions({checkoutUrl}) {
   return (
     <div>
       <a href={checkoutUrl} target="_self">
-        <p>Continue to Checkout &rarr;</p>
+        <p className="text-end label-checkout">Continue to Checkout &rarr;</p>
       </a>
       <br />
     </div>
@@ -244,7 +244,7 @@ function CartDiscounts({discountCodes}) {
 
       {/* Show an input to apply a discount */}
       <UpdateDiscountForm discountCodes={codes}>
-        <div>
+        <div className="flex justify-between">
           <input type="text" name="discountCode" placeholder="Discount code" />
           &nbsp;
           <button type="submit">Apply</button>
